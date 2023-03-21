@@ -7,21 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class SeatingCompActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_seating_comp);
 
-        Button login = (Button) findViewById(R.id.button_logIn);
-        login.setOnClickListener(new View.OnClickListener() {
+        Button reserve = (Button) findViewById(R.id.button_reserve);
+
+        reserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                startActivity(new Intent(SeatingCompActivity.this, HomeActivity.class));
             }
         });
     }
-
-
 }

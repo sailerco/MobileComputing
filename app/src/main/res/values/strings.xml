@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="title">HFU DESK MANAGER</string>
+    <string name="Speichern">Speichern</string>
+    <string name="ChooseTable">Wählen Sie einen Tisch</string>
+    <string name="ChooseTableExtended">Wählen Sie einen Tisch um zur Buchungsübersicht zu gelangen</string>
+    <string name="ReservedTable">Tisch #Nummer wurde für #Datum gewählt</string>
+    <string name="reserve">Reservieren</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="login">Login</string>
+    <string name="book">Book Desk</string>
+    <string name="open">Open Desk</string>
+    <string name="stats">Statistics</string>
+    <string name="Hello">Hello User</string>
 </resources>

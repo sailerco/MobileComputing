@@ -12,6 +12,27 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".StatsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookingViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UserRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OpenDeskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SeatingCompActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SeatingActivity"
+            android:exported="false" />
+        <activity
             android:name=".CalenderActivity"
             android:exported="false" />
         <activity
