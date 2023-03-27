@@ -4,7 +4,7 @@
     <string name="Speichern">Speichern</string>
     <string name="ChooseTable">Wählen Sie einen Tisch</string>
     <string name="ChooseTableExtended">Wählen Sie einen Tisch um zur Buchungsübersicht zu gelangen</string>
-    <string name="ReservedTable">Tisch #Nummer wurde für #Datum gewählt</string>
+    <string name="ReservedTable">Tisch #Nummer wurde für #Datum reserviert</string>
     <string name="reserve">Reservieren</string>
     <string name="username">username</string>
     <string name="password">password</string>
@@ -13,4 +13,10 @@
     <string name="open">Open Desk</string>
     <string name="stats">Statistics</string>
     <string name="Hello">Hello User</string>
+
+    <string name="seat">Seat</string>
+    <string name="date">Datum</string>
+    <string name="time">Tageszeit</string>
+    <string name="User">User</string>
+    <string name="request">Request</string>
 </resources>

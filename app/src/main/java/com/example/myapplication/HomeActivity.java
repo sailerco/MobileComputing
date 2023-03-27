@@ -12,7 +12,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home2);
+        setContentView(R.layout.activity_home);
 
         Button book = (Button) findViewById(R.id.button_book);
         Button open = (Button) findViewById(R.id.button_open);
