@@ -44,9 +44,10 @@
 
     <Button
         android:id="@+id/button_reserve"
-        android:layout_width="151dp"
+        android:layout_width="150dp"
         android:layout_height="60dp"
-        android:text="Reservieren"
+        android:text="@string/reserve"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

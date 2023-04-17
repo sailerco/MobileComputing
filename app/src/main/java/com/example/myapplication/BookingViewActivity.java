@@ -12,7 +12,7 @@ public class BookingViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_booking_view);
+        setContentView(R.layout.activity_your_bookings);
 
         Button save = (Button) findViewById(R.id.button_saveBooking);
         save.setOnClickListener(new View.OnClickListener() {

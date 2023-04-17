@@ -13,7 +13,7 @@ public class UserRequestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_request);
+        setContentView(R.layout.activity_request_desk);
 
         Button request = (Button) findViewById(R.id.button_saveRequests);
         request.setOnClickListener(new View.OnClickListener() {

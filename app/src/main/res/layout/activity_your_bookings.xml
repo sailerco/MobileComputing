@@ -11,11 +11,11 @@
         android:layout_width="151dp"
         android:layout_height="60dp"
         android:layout_marginBottom="44dp"
-        android:text="@string/Speichern"
+        android:text="@string/save"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <include
         android:id="@+id/include3"
@@ -31,12 +31,15 @@
         app:layout_constraintVertical_bias="0.023"></include>
 
     <TableLayout
-        android:layout_width="372dp"
-        android:layout_height="353dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314">
 
         <TableRow>
 
@@ -44,16 +47,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text="@string/User"
+                android:text="@string/date"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:weightSum="2" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text="@string/request"
+                android:text="@string/time"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:weightSum="2" />
         </TableRow>
@@ -68,16 +71,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text=" "
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@tools:sample/date/ddmmyy[0]"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:weightSum="2" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text=" "
+                android:text="@string/morning"
                 android:weightSum="2" />
         </TableRow>
 
@@ -91,16 +94,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text=" "
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@tools:sample/date/ddmmyy[0]"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:weightSum="2" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text="  "
+                android:text="@string/afternoon"
                 android:weightSum="2" />
         </TableRow>
 
@@ -114,16 +117,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text="  "
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@tools:sample/date/ddmmyy[2]"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:weightSum="2" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text="  "
+                android:text="@string/afternoon"
                 android:weightSum="2" />
         </TableRow>
 
@@ -137,16 +140,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text="  "
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@tools:sample/date/ddmmyy[5]"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:weightSum="2" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text="  "
+                android:text="@string/afternoon"
                 android:weightSum="2" />
         </TableRow>
 
@@ -160,16 +163,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text="  "
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@tools:sample/date/ddmmyy[4]"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:weightSum="2" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text="  "
+                android:text="@string/morning"
                 android:weightSum="2" />
         </TableRow>
 
@@ -183,16 +186,16 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text="  "
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:text="@tools:sample/date/ddmmyy[1]"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:weightSum="2" />
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text="  "
+                android:text="@string/morning"
                 android:weightSum="2" />
         </TableRow>
 
@@ -206,21 +209,19 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:padding="5dip"
-                android:text="  "
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:weightSum="2" />
+                android:text="@tools:sample/date/ddmmyy[2]"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:weightSum="2"
+                tools:text="@tools:sample/date/ddmmyy[2]"/>
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:gravity="left"
+                android:gravity="start"
                 android:padding="5dip"
-                android:text="  "
+                android:text="@string/afternoon"
                 android:weightSum="2" />
         </TableRow>
 
-        <View
-            android:layout_height="2dip"
-            android:background="#FF909090" />
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

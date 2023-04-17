@@ -1,22 +1,37 @@
 <resources>
+    <string name ="preference_file_key">SharedPreferenceFileKey</string>
+
     <string name="app_name">My Application</string>
     <string name="title">HFU DESK MANAGER</string>
-    <string name="Speichern">Speichern</string>
-    <string name="ChooseTable">Wählen Sie einen Tisch</string>
-    <string name="ChooseTableExtended">Wählen Sie einen Tisch um zur Buchungsübersicht zu gelangen</string>
-    <string name="ReservedTable">Tisch #Nummer wurde für #Datum reserviert</string>
-    <string name="reserve">Reservieren</string>
+    <string name="ChooseTable">Select a desk</string>
+    <string name="ChooseTableExtended">Select a table to access the booking overview</string>
+    <string name="ReservedTable">Table #number reserved for #date</string>
+    <string name="RequestUsers">Request desk which was booked by another User</string>
+    <string name="ClearReservation">Select dates which can be cleared</string>
+
+    <string name="save">Save</string>
+    <string name="home">Home</string>
+    <string name="reserve">Reserve</string>
     <string name="username">username</string>
-    <string name="password">password</string>
+    <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="book">Book Desk</string>
-    <string name="open">Open Desk</string>
+    <string name="open">Clear Reservation</string>
     <string name="stats">Statistics</string>
-    <string name="Hello">Hello User</string>
+    <string name="Hello">Hello</string>
 
     <string name="seat">Seat</string>
-    <string name="date">Datum</string>
-    <string name="time">Tageszeit</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
     <string name="User">User</string>
     <string name="request">Request</string>
+
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="weekly">Weekly</string>
+    
+    <string name="Capacity">Room capacity usage</string>
+    <string name="DeskCapacity">Table capacity usage</string>
+    <string name="Favourite">Favourite Desk</string>
+
 </resources>

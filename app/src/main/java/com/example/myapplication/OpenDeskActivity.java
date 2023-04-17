@@ -15,7 +15,7 @@ public class OpenDeskActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seating);
+        setContentView(R.layout.activity_open_desk);
         List<Button> btnList = new ArrayList<Button>();
         btnList.add(findViewById(R.id.button_seat_nr1));
         btnList.add(findViewById(R.id.button_seat_nr2));
