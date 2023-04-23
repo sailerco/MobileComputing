@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -25,25 +27,33 @@ public class StatsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
+
+        Context context = getApplicationContext();
+        SharedPreferences sharedPref = context.getSharedPreferences(getString(R.string.preference_file_key),Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("RoomCapacity_0", 70);
+        editor.putInt("TableCapacity_0", 5);
+        editor.putInt("TableCapacity_1", 20);
+        editor.putInt("TableCapacity_2", 30);
+        editor.commit();
+
         barChart = findViewById(R.id.barChart_view_1);
         initChart(barChart);
-        int[] capacity_percentage = new int[]{70};
-        showBarChart(barChart, capacity_percentage);
+        showBarChart(barChart, sharedPref, "RoomCapacity_", 1);
 
         barChart_extended = findViewById(R.id.barChart_view_2);
-        int[] table_capacity_percentage = new int[]{5, 10, 40};
         initChart(barChart_extended);
-        showBarChart(barChart_extended, table_capacity_percentage);
+        showBarChart(barChart_extended, sharedPref,"TableCapacity_", 3);
     }
-    private void showBarChart(BarChart bar,  int[] list){
-        //initBarChart();
+    private void showBarChart(BarChart bar, SharedPreferences sharedPref, String name,  int num){
         ArrayList<Double> valueList = new ArrayList<Double>();
         ArrayList<BarEntry> entries = new ArrayList<>();
         String title = "Title";
         //input data
 
-        for(int i = 0; i < list.length; i++){
-            valueList.add(list[i] * 1.0);
+        for(int i = 0; i < num; i++){
+            int value = sharedPref.getInt(name+i, 0);
+            valueList.add(value * 1.0);
         }
         for (int i = 0; i < valueList.size(); i++){
             BarEntry barEntry = new BarEntry(i, valueList.get(i).floatValue());
@@ -54,7 +64,6 @@ public class StatsActivity extends AppCompatActivity {
         initBarDataSet(barDataSet);
 
         BarData data = new BarData(barDataSet);
-        //data.setBarWidth(10f);
         bar.setData(data);
         bar.invalidate();
     }
@@ -63,7 +72,6 @@ public class StatsActivity extends AppCompatActivity {
         barDataSet.setDrawValues(false);
     }
     private void initChart(BarChart bar){
-        //barChart.setVisibleYRange(0, 100, YAxis.AxisDependency.RIGHT);
         bar.setDrawGridBackground(false);
         bar.setDrawBarShadow(false);
         bar.setPinchZoom(false);
