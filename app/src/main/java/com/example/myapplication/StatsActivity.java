@@ -3,9 +3,13 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.HorizontalBarChart;
@@ -35,6 +39,7 @@ public class StatsActivity extends AppCompatActivity {
         editor.putInt("TableCapacity_0", 5);
         editor.putInt("TableCapacity_1", 20);
         editor.putInt("TableCapacity_2", 30);
+        editor.putString("FavouriteTable", "B2.03");
         editor.commit();
 
         barChart = findViewById(R.id.barChart_view_1);
@@ -44,12 +49,17 @@ public class StatsActivity extends AppCompatActivity {
         barChart_extended = findViewById(R.id.barChart_view_2);
         initChart(barChart_extended);
         showBarChart(barChart_extended, sharedPref,"TableCapacity_", 3);
+
+        TextView table = findViewById(R.id.stats_fave_table);
+        table.setText(sharedPref.getString("FavouriteTable", "Table"));
+
+        Button toHome = findViewById(R.id.button_stats_to_home);
+        toHome.setOnClickListener(view -> finish());
     }
     private void showBarChart(BarChart bar, SharedPreferences sharedPref, String name,  int num){
         ArrayList<Double> valueList = new ArrayList<Double>();
         ArrayList<BarEntry> entries = new ArrayList<>();
         String title = "Title";
-        //input data
 
         for(int i = 0; i < num; i++){
             int value = sharedPref.getInt(name+i, 0);
