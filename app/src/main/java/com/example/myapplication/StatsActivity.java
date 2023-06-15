@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.JsonReader;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,7 +21,14 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class StatsActivity extends AppCompatActivity {
     HorizontalBarChart barChart;
@@ -31,16 +39,11 @@ public class StatsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
-
         Context context = getApplicationContext();
         SharedPreferences sharedPref = context.getSharedPreferences(getString(R.string.preference_file_key),Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt("RoomCapacity_0", 70);
-        editor.putInt("TableCapacity_0", 5);
-        editor.putInt("TableCapacity_1", 20);
-        editor.putInt("TableCapacity_2", 30);
-        editor.putString("FavouriteTable", "B2.03");
-        editor.commit();
+        JsonApi json = new JsonApi(editor);
+        json.execute();
 
         barChart = findViewById(R.id.barChart_view_1);
         initChart(barChart);
@@ -59,7 +62,7 @@ public class StatsActivity extends AppCompatActivity {
     private void showBarChart(BarChart bar, SharedPreferences sharedPref, String name,  int num){
         ArrayList<Double> valueList = new ArrayList<Double>();
         ArrayList<BarEntry> entries = new ArrayList<>();
-        String title = "Title";
+        String title = "";
 
         for(int i = 0; i < num; i++){
             int value = sharedPref.getInt(name+i, 0);
